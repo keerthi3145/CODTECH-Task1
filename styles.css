@@ -1,0 +1,217 @@
+:root {
+    --blue-500: #3b82f6;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-500: #6b7280;
+    --gray-900: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--gray-50);
+    min-height: 100vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.max-w-3xl {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.header .icon {
+    color: var(--blue-500);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gray-900);
+}
+
+.todo-container {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-count {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--gray-900);
+}
+
+.progress-text {
+    color: var(--gray-500);
+}
+
+.progress-bar {
+    width: 12rem;
+    height: 0.5rem;
+    background: var(--gray-100);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--blue-500);
+    transition: width 0.3s ease;
+}
+
+.todo-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.todo-form input,
+.todo-form select {
+    padding: 0.5rem;
+    border: 1px solid var(--gray-100);
+    border-radius: 0.375rem;
+}
+
+.todo-form input {
+    flex: 1;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background: var(--blue-500);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.status-filters,
+.category-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn,
+.category-btn {
+    background: var(--gray-100);
+    color: var(--gray-500);
+}
+
+.filter-btn.active,
+.category-btn.active {
+    background: var(--blue-500);
+    color: white;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--gray-50);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: var(--gray-500);
+}
+
+.todo-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-text {
+    margin-bottom: 0.25rem;
+}
+
+.todo-category {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo-actions button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--gray-500);
+    padding: 2rem 0;
+}
+
+.hidden {
+    display: none;
+}
+
+svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}

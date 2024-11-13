@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\ToDo List\styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gray-50 py-8">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <h1>Todo List</h1>
+            </div>
+
+            <div class="todo-container">
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <div class="progress-count">
+                            <span id="completed-count">0</span>/<span id="total-count">0</span>
+                        </div>
+                        <div class="progress-text">tasks completed</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <form id="todo-form" class="todo-form">
+                    <input type="text" id="todo-input" placeholder="Add a new task..." required>
+                    <select id="category-select">
+                        <option value="">No Category</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Health">Health</option>
+                    </select>
+                    <button type="submit">
+                      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle w-5 h-5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 12h8"></path>
+                            <path d="M12 8v8"></path>
+                        </svg> -->
+                        Add Task</button>
+                </form>
+
+                <div class="filters">
+                    <div class="status-filters">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-filter w-5 h-5 text-gray-500"> ==$0
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+                    <div class="category-filters">
+                        <button class="category-btn active" data-category="">All Categories</button>
+                        <button class="category-btn" data-category="Work">Work</button>
+                        <button class="category-btn" data-category="Personal">Personal</button>
+                        <button class="category-btn" data-category="Shopping">Shopping</button>
+                        <button class="category-btn" data-category="Health">Health</button>
+                    </div>
+            </div>
+                <div id="todo-list" class="todo-list"></div>
+                <p id="empty-state" class="empty-state hidden">No tasks found. Add some tasks to get started!</p>
+            </div>
+        </div>
+    </div>
+    <script src="C:\Users\HP\Desktop\ToDo List\script.js"></script>
+</body>
+</html>
